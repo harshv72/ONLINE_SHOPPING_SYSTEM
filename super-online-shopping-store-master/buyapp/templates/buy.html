@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+    {% block content %}
+    {% load static %}
+    <center>
+        <h1 class="heading">BILL</h1>
+        <table cellpadding="10px">
+        <th><tr><td>Product</td><td>Quantity</td><td>price</td><td></td></tr></th>
+        {% for p in products %}
+            <tr><td> {{ p.pname }} </td>
+                <td> {{p.qty}} </td>
+                <td> {{p.price}} </td><br>
+            </tr>
+        {% endfor %}
+        <tr><td> Total price: </td><td>{{total}}</td></tr>
+        </table>
+    </center>
+    {% endblock %}

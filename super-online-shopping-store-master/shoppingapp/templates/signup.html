@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+     {% block content %}
+<div class="main1">
+<div class="head1">
+<h1 style="padding-left:20px;padding-top:5px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sign Up</h1>
+</div>
+<form action="/shoppingapp/adduserinfo/" method="post">{% csrf_token %}
+<div class="sign">
+<table align="center">
+<tr>
+<td><br>Enter UserName</td>
+</tr>
+<tr>
+<td><input type ="text"  name="username" style="width:200px;height:22px;" required=""/></td>
+</tr>
+
+<tr>
+<td><br>Enter email</td>
+</tr>
+<tr>
+<td><input type ="text"  name="email" style="width:200px;height:22px;" required=""/></td>
+</tr>
+
+<tr>
+<td><br>Enter password</td>
+</tr>
+<tr>
+
+<td><input type ="Password"  name="password" style="width:200px;height:22px;" required=""/></td>
+</tr>
+<tr>
+<tr>
+<td><br>ReEnter password</td>
+</tr>
+<tr>
+
+<td><input type ="Password"  name="pass2" style="width:200px;height:22px;" required=""/></td>
+</tr>
+ <tr><td style="color:red">{{ error }}</td></tr>
+<tr>
+<td><br>Enter Mobile no.</td>
+</tr>
+<tr>
+<td><input type ="text"  name="mobile" style="width:200px;height:22px;" required=""/></td>
+</tr>
+<td><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="butn">Sign Up</button>
+</td>
+</tr>
+</table>
+</div>
+</form>
+</div>
+ {% endblock %}

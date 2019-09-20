@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+    {% block content %}
+ {%load static%}
+		<center><h1>Our Team</h1></center><br><br><br><br>
+<div class="about">
+		<table  width="100%" >
+			<tr>
+				<td>
+					<div class="team" id=a1>
+					<center><img src="{% static '/shoppingapp/admin1.png'%}" width="100px" height="100px">
+						<br>
+					Name:Savan Anadani<br><br>
+					Phone no:+91**********<br><br>
+					Email:savananadani@gmail.com
+					</center>
+                    </div>
+                </td>
+			
+				<td>
+					<div class="team" id=a2>
+					<center>
+						<img class="abt" src="{% static '/shoppingapp/admin1.png'%}" width="100px" height="100px">
+						<br>
+					Name:Preet Badyani<br><br>
+					Phone no:+91**********<br><br>
+					Email:preetbadiyani1999@gmail
+					</center>
+                    </div>
+				</td>
+			
+				<td>
+					<div class="team" id=a3>
+					<center>
+						<img src="{% static '/shoppingapp/admin1.png'%}" width="100px" height="100px">
+						<br>
+					Name:Hiren Barad<br><br>
+					Phone no:+91**********<br><br>
+					Email:hirenbarad7797@gmail.com
+					</center>
+                    </div>
+				</td>
+            </tr>
+		</table>
+		</div>
+  {% endblock %}

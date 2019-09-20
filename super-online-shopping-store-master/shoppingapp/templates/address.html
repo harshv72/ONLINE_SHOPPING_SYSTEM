@@ -1,0 +1,33 @@
+
+{% extends 'base.html' %}
+     {% block content %}
+{% if form.errors %}
+
+<p class="error"> Invalid Username or Password </p>
+{% endif %}
+<div class="main">
+    <div class="head" style="background: #5f5555;">
+<h1 style="padding-left:20px;padding-top:5px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Login</h1>
+</div>
+
+<form action="/buyapp/buy/" method="post">{% csrf_token %}
+<div class="sign">
+<table align="center">
+<tr>
+<td><br>Enter Address</td>
+</tr>
+<tr>
+<td><input type ="textarea"  name="address" value="APC,Nadiad" style="width:200px;height:22px;" required=""/></td>
+</tr>
+
+
+<tr>
+<td><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" name="submit" value="Buy" class="butn" style="background: #5f5555"></td>
+</tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+</table>
+
+</div>
+</form>
+</div>
+    {% endblock %}
+

@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+ {% load static %}
+     {% block content %}
+<div class="main1">
+<div class="head1" style="background: #5f5555;">
+<h1 style="padding-left:20px;padding-top:5px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Item Details</h1>
+</div>
+<form action="/shoppingapp/additeminfo1/" method="post">{% csrf_token %}
+<div class="sign">
+<table align="center">
+	<tr><td style="color:red">{{ add }}</td></tr>
+{% for i in Id %}
+<tr>
+<td><br>Enter Product Id</td>
+</tr>
+<tr>
+<td><input type ="text"  name="pname" style="width:200px;height:22px;" value="{{i.pid}}" required=""/></td>
+</tr>
+{% endfor %}
+<tr>
+<td><br>Enter Product Name</td>
+</tr>
+<tr>
+<td><input type ="text"  name="pname" style="width:200px;height:22px;" required=""/></td>
+</tr>
+
+<tr>
+<td><br>Enter Price</td>
+</tr>
+<tr>
+
+<td><input type ="number"  name="price" style="width:200px;height:22px;" required=""/></td>
+</tr>
+
+<tr>
+<tr>
+<td><br>Enter Category</td>
+</tr>
+<tr>
+
+<td>
+	<select name="cate" style="width:200px;height:22px;" required="">
+		<option value="T-Shirts">T-Shirts</option>
+		<option value="Watches">Watches</option>
+		<option value="Spectacles">Spectacles</option>
+		<option value="Wallets">Wallets</option>
+		<option value="Shoes">Shoes</option>
+		<option value="Shoes">Television</option>
+		<option value="Shoes">Air-Conditioner</option>
+		<option value="Shoes">Mobile</option>
+		<option value="Shoes">Laptop</option>
+	</select>
+	</td>
+</tr>
+ 
+<tr>
+<td><br>Enter Image</td>
+</tr>
+<tr>
+<td><input type ="text"  name="image" style="width:200px;height:22px;" required="" title="must be in directory" /></td>
+</tr>
+<td><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input style="background: #5f5555;" type="submit" class="butn" name="add" value="Add"></input>
+</td>
+</tr>
+</table>
+</div>
+</form>
+</div>
+ {% endblock %}-

@@ -1,0 +1,39 @@
+.abt {
+  border-radius: 50%;
+}
+.about
+{
+margin-left:5%
+}
+
+label {
+  cursor:pointer
+}
+.team{
+    border: 1px solid black;
+    padding: 10px;
+    width: 300px;
+    height: 220px;
+    font-size: 18px;
+}
+#a1 {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+#a2 {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+#a3 {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+#main
+{
+  background-color: blue;
+}
+
+

@@ -1,0 +1,24 @@
+.butn2{
+		border:none;
+		color:white;
+		text-align:center;
+		text-decoration:none;
+		display:inline-block;
+		background:#373d53;
+		font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+		font-size:20px;
+		padding:15px 150px;
+	}
+	.butn2:hover
+	{
+		border:none;
+		color:white;
+		text-align:center;
+		text-decoration:none;
+		display:inline-block;
+		background:green;
+		font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+		font-size:20px;
+		padding:15px 150px;
+
+	}

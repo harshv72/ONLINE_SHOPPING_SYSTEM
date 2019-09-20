@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+ {% load static %}
+     {% block content %}
+<div class="main1">
+<div class="head1" style="background: #5f5555;">
+<h1 style="padding-left:20px;padding-top:5px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Item Details</h1>
+</div>
+<form action="/shoppingapp/deleteiteminfo/" method="post">{% csrf_token %}
+<div class="sign">
+<table align="center">
+	<tr><td style="color:red">{{ delete }}</td></tr>
+<tr>
+<td><br>Enter Product Name</td>
+</tr>
+<tr>
+<td><input type ="text"  name="pname" style="width:200px;height:22px;" required=""/></td>
+</tr>
+
+
+
+
+
+ 
+
+<tr>
+<td><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input style="background: #5f5555;" type="submit" class="butn" name="delete" value="Delete"></input>
+</td>
+</tr>
+</table>
+</div>
+</form>
+</div>
+ {% endblock %}-

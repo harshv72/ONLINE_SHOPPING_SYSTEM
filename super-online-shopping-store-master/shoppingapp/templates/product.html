@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+     {% block content %}
+        {% load static %}
+        {% for p in products %}
+
+                <form action="/cartapp/cart/" method="post">{% csrf_token %}
+                        <div class="product">
+                <img src="{%static  'shoppingapp/'%}{{p.image}}" alt="{p.pname}"
+                     title="{p.pname}" width="200" height="200">
+                <table>
+                <tr><td> Product name: </td><td> {{ p.pname }} </td></tr>
+                <tr><td> Category: </td><td> {{ p.category }} </td></tr>
+                <tr><td> Price: </td><td> {{ p.price }} </td></tr>
+                        <tr><td>qty:</td><td><select name="qty">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option></select></td></tr>
+                <tr><td colspan="2" align="center"><input type="submit" style="background-color: green;color: white; padding:10px 25px;font-size:15px;text-align:center;display:inline-block;" value="Buy"/>
+                        <button type="submit" style="background-color: green;color: white; padding:10px 25px;font-size:15px;text-align:center;display:inline-block;" formaction="/cartapp/cart_add/">Add to cart</button>
+                </td></tr>
+                </table>
+                <input type="hidden" name="pname" value="{{p.pname}}"/>
+                            </div>
+                </form>
+        {% endfor %}
+    {% endblock %}

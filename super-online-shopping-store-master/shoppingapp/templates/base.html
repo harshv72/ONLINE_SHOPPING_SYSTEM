@@ -1,0 +1,41 @@
+<html>
+    <head><title>Online Shopping System</title>{% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'shoppingapp/font/css/font-awesome.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'shoppingapp/style.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'shoppingapp/login.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'shoppingapp/product.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'shoppingapp/signup.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'shoppingapp/contact.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'shoppingapp/index.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'shoppingapp/about.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'shoppingapp/buy.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'shoppingapp/cate.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'shoppingapp/forgot.css' %}" />
+
+    </head>
+<body>
+<div class="header">
+    <header>
+ <h1 style="color:white;position:relative;left:10px;top:10px">Online Shopping System</h1>
+<a href="/shoppingapp/cate/" style="position:relative;top:-50px;left:660px;text-decoration:none;color: white;">See Products</a>&nbsp;
+&nbsp; <a href="/shoppingapp/index/" style="position:relative;top:-50px;left:660px;text-decoration:none;color: white;">Home</a>
+ <a href="/shoppingapp/about/" style="position:relative;top:-50px;left:690px;text-decoration:none;color: white;">About us</a>
+ <a href="/shoppingapp/contact/" style="position:relative;top:-50px;left:720px;text-decoration:none;color: white;">Contact us</a>
+        {% load static %}
+        {% if request.user.is_authenticated %}
+            <a href="{% url  'logout' %}" style="position:relative;top:-50px;left:750px;text-decoration:none;color: white;">Logout</a>
+            <a href="{% url 'cart' %}" >
+                <img src="{% static '/shoppingapp/cart.jpg' %}" alt="cart" height="30" width="30" style="position:relative;top:-50px;left:810px;">
+            </a>
+        {% else %}
+                <a href="{% url  'login' %}" style="position:relative;top:-50px;left:750px;text-decoration:none;color: white;">Login</a>&nbsp;
+          &nbsp;<a href="{% url 'signup' %}" style="position:relative;top:-50px;left:750px;text-decoration:none;color: white;">Signup</a>
+        {% endif %}
+   </header>
+     </div>
+{% block content %}
+{% endblock %}
+</body>
+</html>
+
+

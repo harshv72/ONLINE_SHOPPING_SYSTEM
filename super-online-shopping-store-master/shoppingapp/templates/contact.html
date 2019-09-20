@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+     {% block content %}
+<div class="contact-form">
+			 	  	 	<h1 style="position:relative;left:45%;">Contact Us</h1>
+			 	 	    <form action="/shoppingapp/contact2/">
+					    	<div>
+						    	<span><label>Name</label></span>
+						    	<span><input name="userName" type="text" class="textbox" required=""></span>
+						    </div>
+						    <div>
+						    	<span><label>E-mail</label></span>
+						    	<span><input name="userEmail" type="text" class="textbox" required=""></span>
+						    </div>
+						    <div>
+						     	<span><label>Mobile</label></span>
+						    	<span><input name="userPhone" type="text" class="textbox" required=""></span>
+						    </div>
+						    <div>
+						    	<span><label>Subject</label></span>
+						    	<span><textarea name="userMsg"></textarea></span>
+						    </div>
+						   <div>
+						   		<span><input type="submit" class="" value="Submit us"></span>
+						  </div>
+					    </form>
+				    </div>
+    {% endblock %}

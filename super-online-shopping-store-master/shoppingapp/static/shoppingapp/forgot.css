@@ -1,0 +1,14 @@
+div.main2
+{
+font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+		background:#ffffff;
+		opacity:0.8;
+		width:300px;
+		height:300px;
+		padding:5px;
+		border:2px thin black;
+		position:relative;
+		left:500px;
+		top:50px;
+
+}

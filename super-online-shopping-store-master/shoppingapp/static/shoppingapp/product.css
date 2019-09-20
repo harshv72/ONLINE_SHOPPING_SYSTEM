@@ -1,0 +1,34 @@
+	.product
+{
+    float:left;
+    position:relative;
+    top:-50px;
+    margin-left:6%;
+    padding: 0px 17px;
+    border-collapse:collapse;
+
+}
+.butn{
+		border:none;
+		color:white;
+		text-align:center;
+		text-decoration:none;
+		display:inline-block;
+		background:#373d53;
+		font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+		font-size:16px;
+		padding:12px 20px;
+	}
+	.butn:hover
+	{
+		border:none;
+		color:white;
+		text-align:center;
+		text-decoration:none;
+		display:inline-block;
+		background:black;
+		font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+		font-size:16px;
+		padding:12px 20px;
+
+	}

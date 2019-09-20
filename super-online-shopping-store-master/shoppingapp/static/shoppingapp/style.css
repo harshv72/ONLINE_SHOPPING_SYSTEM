@@ -1,0 +1,28 @@
+    body
+    {
+ background:#d1d1d1;
+        margin: 0px;
+        overflow-x:hidden;
+
+
+    }
+    .header
+{
+    padding:0px;
+    margin:0px;
+    text-align:left;
+    background-color:black;
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 20;
+    font-color:white;
+    height: 70px;
+    padding-top:-5px;
+    position: relative;
+    top:-50px;
+}
+.nav
+{
+    text-align:center;
+    font-color:white;
+}
+

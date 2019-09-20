@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+    {% block content %}
+<center><h1>Your Cart</h1></center>
+    <center>
+    <table cellpadding="10px" cellspacing="20px">
+        <th><tr><td>Product name</td><td>Quantity</td><td>price</td><td></td></tr></th>
+    {% for c in cart %}
+        <tr><td> {{ c.pname }} </td>
+        <td> {{c.qty}} </td>
+       <td> {{ c.price }} </td>
+        <td><a style="background-color: green;color: white; padding:10px 25px;font-size:15px;text-align:center;display:inline-block;" href="/cartapp/remove?cid={{c.id}}">Remove</a>
+        </td></tr>
+    {% endfor %}
+        <center><tr><td><a style="background-color: green;color: white; padding:10px 25px;font-size:15px;text-align:center;display:inline-block;" href="/buyapp/buy/">Buy</a></td>
+        <td><a style="background-color: green;color: white; padding:10px 25px;font-size:15px;text-align:center;display:inline-block;" href="/shoppingapp/cate/">Add more Iteams</a></td></tr></center>
+    </table>
+    </center>
+    {% endblock %}
+
